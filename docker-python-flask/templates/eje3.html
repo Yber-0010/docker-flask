@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+{% block contenido %}
+<p>
+    ejercicio3
+</p>
+<form class="form-singin" action="/eje3" method="POST">
+    
+    <h1>multiplica dos numeros</h1>
+    <input type="number" name="a" id="a" placeholder="a" required value="{{data.a}}">
+    <br>
+    <input type="number" name="b" id="b" placeholder="b" required value="{{data.b}}">
+    <br>
+    multiplicacion
+    <input type="radio" name="t" id="t" value="2"/>
+    <br>
+    divicion
+    <input type="radio" name="t" id="t" value="1"/>
+    <br>
+    <button type="submit">ejecutar</button>
+</form>
+{% if data.multiplicacion != ''%}
+<p>la multiplicacion es: {{data.multiplicacion}}</p>
+{% endif %}
+{% if data.divicion != ''%}
+<p>la divicion es: {{data.divicion}}</p>
+{% endif %}
+
+{% endblock %}

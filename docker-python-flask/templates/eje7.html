@@ -1,0 +1,20 @@
+{% extends './base.html' %}
+{% block contenido %}
+<p>
+    ejercicio7
+    año bisiesto es aquel que en febrero tiene 29 dias y sucede cada 4 años
+</p>
+<form class="form-singin" action="/eje7" method="POST">
+    <h1>Ingrese un año</h1>
+    <input type="number" name="nombre" id="nombre" placeholder="año">
+    <br>
+    <button type="submit">Verificar</button>
+</form>
+{% if data.b %}
+<p>el año {{data.nombre}} es bisiesto</p>
+{% endif %}
+{% if data.b != True %}
+<p>el año {{data.nombre}} no es bisiesto</p>
+{% endif %}
+
+{% endblock %}

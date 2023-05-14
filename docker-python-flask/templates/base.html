@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{data.titulo}}</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+</head>
+<body>
+    <a href="/">index</a>
+    <br>
+    <a href="{{url_for('eje1')}}">Ejercicio 1 suma dos numeros</a>
+    <br>
+    <a href="{{url_for('eje2')}}">Ejercicio 2 resta dos numeros</a>
+    <br>
+    <a href="{{url_for('eje3')}}">Ejercicio 3 multiplica dos numeros</a>
+    <br>
+    <a href="{{url_for('eje4')}}">Ejercicio 4 nombre</a>
+    <br>
+    <a href="{{url_for('eje5')}}">Ejercicio 5 comparar dos numeros</a>
+    <br>
+    <a href="{{url_for('eje6')}}">Ejercicio 6 comparar dos años</a>
+    <br>
+    <a href="{{url_for('eje7')}}">Ejercicio 7 año bisiesto</a>
+    <br>
+    
+    <hr>
+
+    {{data.encabezado}}
+    {% block contenido %}
+    {% endblock %}
+
+    <script src="{{url_for('static',filename='js/index.js')}}"></script>
+</body>
+</html>
